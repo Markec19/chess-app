@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility.piece
 {
-    internal class Pawn : Piece
+    class Pawn : Piece
     {
+
+        public Pawn() { }
         public Pawn(string color, Field currentField) : base(color, currentField)
         {
         }
 
-        protected override List<Field> checkPossibleMoves()
+        public override List<Field> checkPossibleMoves()
         {
             throw new NotImplementedException();
         }

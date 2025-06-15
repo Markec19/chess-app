@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility
 {
-    internal class Player
+    class Player
     {
-        private string color {  get; set; } 
-        private bool turn {  get; set; }
-        private bool isChecked { get; set; }
+        public string Color {  get; set; }
+        public bool Turn {  get; set; }
+        //public bool IsChecked { get; set; }
 
         public Player(string color, bool turn)
         {
-            this.color = color;
-            this.turn = turn;
-            isChecked = false;
+            this.Color = color;
+            this.Turn = turn;
+            //IsChecked = false;
         }
     }
 }

@@ -7,19 +7,26 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility
 {
-    internal class Field
+    class Field
     {
-        private string x_axis { get; set; }
-        private string y_axis { get; set; }
-        private string color { get; set; }
-        private Piece? occupyingPiece { get; set; }
+        public string X_axis { get; set; }
+        public string Y_axis { get; set; }
+        public string Color { get; set; }
+        public Piece? OccupyingPiece { get; set; }
 
         public Field(string x_axis, string y_axis, string color, Piece occupyingPiece)
         {
-            this.x_axis = x_axis;
-            this.y_axis = y_axis;
-            this.color = color;
-            this.occupyingPiece = occupyingPiece;
+            this.X_axis = x_axis;
+            this.Y_axis = y_axis;
+            this.Color = color;
+            this.OccupyingPiece = occupyingPiece;
+        }
+
+        public Field(string x_axis, string y_axis, string color)
+        {
+            this.X_axis = x_axis;
+            this.Y_axis = y_axis;
+            this.Color = color;
         }
 
 

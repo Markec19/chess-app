@@ -6,15 +6,63 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility.piece
 {
-    internal class Rook : Piece
+    class Rook : Piece
     {
+        public Rook() 
+        { 
+        }
         public Rook(string color, Field currentField) : base(color, currentField)
         {
         }
 
-        protected override List<Field> checkPossibleMoves()
+        public override List<Field> checkPossibleMoves()
         {
-            throw new NotImplementedException();
+            int x = Board.XAxisToIndex[CurrentField.X_axis];
+            int y = Board.YAxisToIndex[CurrentField.Y_axis];
+
+            for(int dx = 0; dx < 8; dx++)
+            {
+                if(dx + x < 7 || dx + x > 0)
+                {
+                    if (Board.GetField(dx, y).OccupyingPiece == null)
+                    {
+                        Moves.Add(Board.GetField(dx, y));
+                    }
+                    else if (Board.GetField(dx, y).OccupyingPiece.Color != Color)
+                    {
+                        Moves.Add(Board.GetField(dx, y));
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+
+            for (int dy = 0; dy < 8; dy++)
+            {
+                if (dy + y < 7 || dy + y > 0)
+                {
+                    if (Board.GetField(x, dy).OccupyingPiece == null)
+                    {
+                        Moves.Add(Board.GetField(x, dy));
+                    } else if (Board.GetField(x, dy).OccupyingPiece.Color != Color)
+                    {
+                        Moves.Add(Board.GetField(x, y));
+                        break;
+                    }
+                } else
+                {
+                    break;
+                }
+            }
+
+            return Moves;
         }
+
+
     }
+
+
 }

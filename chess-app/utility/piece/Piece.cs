@@ -6,21 +6,30 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility.piece
 {
-    internal abstract class Piece
+    abstract class Piece
     {
-        protected string color;
-        protected Field currentField {  get; set; }
-        protected List<Field> moves;
-        protected bool eaten {  get; set; }
+        public string Color;
+        public Field CurrentField {  get; set; }
+        public List<Field> Moves;
+
+        public bool hasMoved { get; set; }
+        public bool Eaten {  get; set; }
+
+        public bool Pinned { get; set; }
+
+        public Piece() { }
 
         public Piece(string color, Field currentField) 
         {
-            this.color = color;
-            this.currentField = currentField;
-            moves = checkPossibleMoves();
+            this.Color = color;
+            this.CurrentField = currentField;
+            Moves = new List<Field>();
+            hasMoved = false;
+            Eaten = false;
+            Pinned = false;
         }
 
-        protected abstract List<Field> checkPossibleMoves();
+        public abstract List<Field> checkPossibleMoves();
 
 
     }
