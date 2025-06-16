@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility
 {
-    class Move
+    public class Move
     {
         public Piece MovingPiece { get; set; }
         public Field TargetField { get; set; }
@@ -68,16 +68,16 @@ namespace chess_app.utility
                 switch (PromotionPieceType)
                 {
                     case "Queen":
-                        MovingPiece = new Queen(MovingPiece.Color, TargetField);
+                        MovingPiece = new Queen(MovingPiece.Color, "Queen", TargetField);
                         break;
                     case "Rook":
-                        MovingPiece = new Rook(MovingPiece.Color, TargetField);
+                        MovingPiece = new Rook(MovingPiece.Color, "Rook", TargetField);
                         break;
                     case "Bishop":
-                        MovingPiece = new Bishop(MovingPiece.Color, TargetField);
+                        MovingPiece = new Bishop(MovingPiece.Color, "Bishop", TargetField);
                         break;
                     case "Knight":
-                        MovingPiece = new Knight(MovingPiece.Color, TargetField);
+                        MovingPiece = new Knight(MovingPiece.Color, "Knight", TargetField);
                         break;
                 }
 

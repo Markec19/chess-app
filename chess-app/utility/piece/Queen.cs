@@ -12,7 +12,7 @@ namespace chess_app.utility.piece
         public Queen()
         {
         }
-        public Queen(string color, Field currentField) : base(color, currentField)
+        public Queen(string color, string name, Field currentField) : base(color, name, currentField)
         {
         }
 

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility.piece
 {
-    abstract class Piece
+    public abstract class Piece
     {
         public string Color;
+        public string Name { get; set; }
         public Field CurrentField {  get; set; }
         public List<Field> Moves;
 
@@ -19,9 +20,10 @@ namespace chess_app.utility.piece
 
         public Piece() { }
 
-        public Piece(string color, Field currentField) 
+        public Piece(string color, string name, Field currentField) 
         {
             this.Color = color;
+            this.Name = name;
             this.CurrentField = currentField;
             Moves = new List<Field>();
             hasMoved = false;

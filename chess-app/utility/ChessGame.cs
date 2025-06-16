@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility
 {
-    class ChessGame
+    public class ChessGame
     {
         public Player WhitePlayer {  get; set; }
         public Player BlackPlayer { get; set; }

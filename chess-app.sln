@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chess-app", "chess-app\chess-app.csproj", "{3259649D-2D6D-46DF-8E8C-E3B4FA0683AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessAppGUI", "ChessAppGUI\ChessAppGUI.csproj", "{7829DF44-B7C5-45B6-93EC-5E0313A39B1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3259649D-2D6D-46DF-8E8C-E3B4FA0683AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3259649D-2D6D-46DF-8E8C-E3B4FA0683AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3259649D-2D6D-46DF-8E8C-E3B4FA0683AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7829DF44-B7C5-45B6-93EC-5E0313A39B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7829DF44-B7C5-45B6-93EC-5E0313A39B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7829DF44-B7C5-45B6-93EC-5E0313A39B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7829DF44-B7C5-45B6-93EC-5E0313A39B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

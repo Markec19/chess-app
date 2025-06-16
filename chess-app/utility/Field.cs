@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility
 {
-    class Field
+    public class Field
     {
         public string X_axis { get; set; }
         public string Y_axis { get; set; }

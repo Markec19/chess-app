@@ -11,7 +11,7 @@ namespace chess_app.utility.piece
         public Rook() 
         { 
         }
-        public Rook(string color, Field currentField) : base(color, currentField)
+        public Rook(string color, string name, Field currentField) : base(color, name, currentField)
         {
         }
 

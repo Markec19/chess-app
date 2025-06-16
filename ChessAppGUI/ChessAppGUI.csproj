@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\BlackBishop.png" />
+    <None Remove="Resources\BlackKing.png" />
+    <None Remove="Resources\BlackKnight.png" />
+    <None Remove="Resources\BlackPawn.png" />
+    <None Remove="Resources\BlackQueen.png" />
+    <None Remove="Resources\BlackRook.png" />
+    <None Remove="Resources\WhiteBishop.png" />
+    <None Remove="Resources\WhiteKing.png" />
+    <None Remove="Resources\WhiteKnight.png" />
+    <None Remove="Resources\WhitePawn.png" />
+    <None Remove="Resources\WhiteQueen.png" />
+    <None Remove="Resources\WhiteRook.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BlackBishop.png" />
+    <EmbeddedResource Include="Resources\BlackKing.png" />
+    <EmbeddedResource Include="Resources\BlackKnight.png" />
+    <EmbeddedResource Include="Resources\BlackPawn.png" />
+    <EmbeddedResource Include="Resources\BlackQueen.png" />
+    <EmbeddedResource Include="Resources\BlackRook.png" />
+    <EmbeddedResource Include="Resources\WhiteBishop.png" />
+    <EmbeddedResource Include="Resources\WhiteKing.png" />
+    <EmbeddedResource Include="Resources\WhiteKnight.png" />
+    <EmbeddedResource Include="Resources\WhitePawn.png" />
+    <EmbeddedResource Include="Resources\WhiteQueen.png" />
+    <EmbeddedResource Include="Resources\WhiteRook.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\chess-app\chess-app.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -12,7 +12,7 @@ namespace chess_app.utility.piece
         public Bishop()
         {
         }
-        public Bishop(string color, Field currentField) : base(color, currentField)
+        public Bishop(string color, string name, Field currentField) : base(color, name, currentField)
         {
         }
 

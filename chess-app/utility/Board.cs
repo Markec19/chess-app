@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility
 {
-    class Board
+    public class Board
     {
         public static Field[,] Fields;
         public List<Piece> WhitePieces { get; }
@@ -80,11 +80,11 @@ namespace chess_app.utility
                 {
                     string color = (x + y) % 2 == 0 ? "white" : "black";
                     //fields[x, y] = new Field(xAxis[x], yAxis[yAxis.Length - 1 - y], color);
-                    Fields[x, y] = new Field(xAxis[x], yAxis[y], color);
+                    Fields[x, y] = new Field(xAxis[x], yAxis[7 - y], color);
 
                     if (y == 1)
                     {
-                        Pawn pawn = new Pawn("white", Fields[x, y]);
+                        Pawn pawn = new Pawn("white", "Pawn", Fields[x, y]);
                         Fields[x, y].OccupyingPiece = pawn;
                         WhitePieces.Add(pawn);
                     }
@@ -95,21 +95,21 @@ namespace chess_app.utility
                         {
                             case 0:
                             case 7:
-                                piece = new Rook("white", Fields[x, y]);
+                                piece = new Rook("white", "Rook", Fields[x, y]);
                                 break;
                             case 1:
                             case 6:
-                                piece = new Knight("white", Fields[x, y]);
+                                piece = new Knight("white", "Knight", Fields[x, y]);
                                 break;
                             case 2:
                             case 5:
-                                piece = new Bishop("white", Fields[x, y]);
+                                piece = new Bishop("white", "Bishop", Fields[x, y]);
                                 break;
                             case 3:
-                                piece = new Queen("white", Fields[x, y]);
+                                piece = new Queen("white", "Queen", Fields[x, y]);
                                 break;
                             case 4:
-                                piece = new King("white", Fields[x, y]);
+                                piece = new King("white", "King", Fields[x, y]);
                                 break;
                         }
                         if (piece != null)
@@ -120,7 +120,7 @@ namespace chess_app.utility
                     }
                     else if (y == 6)
                     {
-                        Pawn pawn = new Pawn("black", Fields[x, y]);
+                        Pawn pawn = new Pawn("black", "Pawn", Fields[x, y]);
                         Fields[x, y].OccupyingPiece = pawn;
                         BlackPieces.Add(pawn);
                     }
@@ -131,21 +131,21 @@ namespace chess_app.utility
                         {
                             case 0:
                             case 7:
-                                piece = new Rook("black", Fields[x, y]);
+                                piece = new Rook("black", "Rook", Fields[x, y]);
                                 break;
                             case 1:
                             case 6:
-                                piece = new Knight("black", Fields[x, y]);
+                                piece = new Knight("black", "Knight", Fields[x, y]);
                                 break;
                             case 2:
                             case 5:
-                                piece = new Bishop("black", Fields[x, y]);
+                                piece = new Bishop("black", "Bishop", Fields[x, y]);
                                 break;
                             case 3:
-                                piece = new Queen("black", Fields[x, y]);
+                                piece = new Queen("black", "Queen", Fields[x, y]);
                                 break;
                             case 4:
-                                piece = new King("black", Fields[x, y]);
+                                piece = new King("black", "King", Fields[x, y]);
                                 break;
                         }
                         if (piece != null)

@@ -10,7 +10,7 @@ namespace chess_app.utility.piece
     {
 
         public Knight() { }
-        public Knight(string color, Field currentField) : base(color, currentField)
+        public Knight(string color, string name, Field currentField) : base(color, name, currentField)
         {
         }
 

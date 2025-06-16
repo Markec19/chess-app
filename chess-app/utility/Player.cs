@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace chess_app.utility
 {
-    class Player
+    public class Player
     {
         public string Color {  get; set; }
         public bool Turn {  get; set; }
